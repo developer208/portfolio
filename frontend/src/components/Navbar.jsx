@@ -107,7 +107,7 @@ const Navbar = () => {
             onClick={trigger}
             className="h-[40px] mb-5 font-bold w-[150px] pl-5 text-xl"
           >
-            <Link to="/contact">Resume</Link>
+            <Link to="/resume">Resume</Link>
           </div>
           <hr className="text-black h-2" />
           <div
