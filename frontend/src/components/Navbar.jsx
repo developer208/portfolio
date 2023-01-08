@@ -15,20 +15,20 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-[60px] fixed">
+    <div className="w-full h-[80px] fixed">
       <div
         className={
           dark
-            ? "w-[100%] text-white bg-[#003744]/10 backdrop-blur-sm   flex justify-between h-[60px]"
-            : "w-[100%]   backdrop-blur-sm bg-white/30  flex justify-between h-[60px]"
+            ? "w-[100%] text-white bg-[#003744]/10 backdrop-blur-sm   flex justify-between h-[80px]"
+            : "w-[100%]   backdrop-blur-sm bg-white/30  flex justify-between h-[80px]"
         }
       >
-        <div className="w-[150px]  text-center box-border pt-3 list-none cursor-pointer font-sans ">
+        <div className="w-[150px]  text-center box-border pt-6 list-none cursor-pointer font-sans ">
           <li className=" text-2xl font-moon font-extrabold">
             <Link to="/">Developer208</Link>
           </li>
         </div>
-        <div className="sm:hidden pt-2 w-[50px]  ">
+        <div className="sm:hidden pt-6 w-[50px]  ">
           {icon ? (
             <div onClick={trigger} className="w-[30px] mx-auto cursor-pointer">
               <AiOutlineClose size={28} />
@@ -40,22 +40,22 @@ const Navbar = () => {
           )}
         </div>
         <div className="sm:flex hidden ">
-          <div className="w-[120px] text-center box-border pt-3  list-none cursor-pointer font-sans ">
+          <div className="w-[120px] text-center box-border pt-6  list-none cursor-pointer font-sans ">
             <li className="text-lg font-bold hover:underline">
               <Link to="/projects">Projects</Link>
             </li>
           </div>
-          <div className="w-[120px] text-center box-border pt-3 list-none cursor-pointer font-sans ">
+          <div className="w-[120px] text-center box-border pt-6 list-none cursor-pointer font-sans ">
             <li className="text-lg font-bold hover:underline">
               <Link to="/resume">Resume</Link>
             </li>
           </div>
-          <div className="w-[120px] text-center box-border  pt-3  list-none cursor-pointer font-sans ">
+          <div className="w-[120px] text-center box-border  pt-6  list-none cursor-pointer font-sans ">
             <li className="text-lg font-bold hover:underline">
               <Link to="/about">About</Link>
             </li>
           </div>
-          <div className="w-[120px] text-center box-border pt-3 list-none cursor-pointer font-sans ">
+          <div className="w-[120px] text-center box-border pt-6 list-none cursor-pointer font-sans ">
             <li className="text-lg font-bold hover:underline">
               <Link to="/contact">Contact</Link>
             </li>
@@ -65,14 +65,14 @@ const Navbar = () => {
           {dark ? (
             <div
               onClick={() => setDark(!dark)}
-              className="w-[35px] h-[35px] mx-auto mt-2 cursor-pointer "
+              className="w-[35px] h-[35px] mx-auto mt-5 cursor-pointer "
             >
               <CiDark size={30} />
             </div>
           ) : (
             <div
               onClick={() => setDark(!dark)}
-              className="w-[35px] h-[35px] mx-auto mt-2 cursor-pointer "
+              className="w-[35px] h-[35px] mx-auto mt-5 cursor-pointer "
             >
               <MdDarkMode size={30} />
             </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
               : "fixed left-[-100%]"
           }
         >
-          <div className="w-[150px] mb-4  text-center box-border pt-3 list-none cursor-pointer font-sans ">
+          <div className="w-[150px] mb-4  text-center box-border pt-6 list-none cursor-pointer font-sans ">
             <li
               onClick={trigger}
               className=" text-2xl font-moon font-extrabold"
