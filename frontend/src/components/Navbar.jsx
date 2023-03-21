@@ -1,10 +1,11 @@
-import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineClose } from "react-icons/ai";
-import { CiDark } from "react-icons/ci";
-import { MdDarkMode } from "react-icons/md";
-import { themeContext } from "../provider/ThemeProvider";
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { AiOutlineClose } from 'react-icons/ai';
+import { CiDark } from 'react-icons/ci';
+import { MdDarkMode } from 'react-icons/md';
+import { themeContext } from '../provider/ThemeProvider';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [icon, setIcon] = useState(false);
@@ -15,12 +16,17 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-[80px] fixed">
+    <motion.div
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1.2 }}
+      className="w-full h-[80px] fixed z-10"
+    >
       <div
         className={
           dark
-            ? "w-[100%] text-white bg-[#003744]/10 backdrop-blur-sm   flex justify-between h-[80px]"
-            : "w-[100%]   backdrop-blur-sm bg-white/30  flex justify-between h-[80px]"
+            ? 'w-[100%] text-white bg-[#003459]/30 backdrop-blur-sm   flex justify-between h-[80px]'
+            : 'w-[100%]    backdrop-blur-sm bg-white/30  flex justify-between h-[80px]'
         }
       >
         <div className="w-[150px]  text-center box-border pt-6 list-none cursor-pointer font-sans ">
@@ -82,20 +88,20 @@ const Navbar = () => {
           className={
             icon
               ? dark
-                ? " sm:hidden h-[100vh] w-[220px] absolute  ease-in-out duration-500 border-r-[1px] border-black bg-[#003744] left-[0px] "
-                : " sm:hidden h-[100vh] w-[220px] absolute  ease-in-out duration-500  bg-[#fbfbfb] left-[0px] "
-              : "fixed left-[-100%]"
+                ? ' sm:hidden h-[100vh] w-[220px] absolute  ease-in-out duration-500 border-r-[1px] z-20 bg-[#023f6a] left-[0px] '
+                : ' sm:hidden h-[100vh] w-[220px] absolute  ease-in-out duration-500  bg-[#fbfbfb] z-20 left-[0px] '
+              : 'fixed left-[-100%]'
           }
         >
           <div className="w-[150px] mb-4  text-center box-border pt-6 list-none cursor-pointer font-sans ">
             <li
               onClick={trigger}
-              className=" text-2xl font-moon font-extrabold"
+              className=" text-2xl font-moon font-extrabold  "
             >
               <Link to="/">Developer208</Link>
             </li>
           </div>
-          <hr className="text-black h-2" />
+          <hr className="text-black h-2 mt-6" />
           <div
             onClick={trigger}
             className="h-[40px] mb-5 font-bold w-[150px] pl-5 text-xl"
@@ -149,7 +155,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
