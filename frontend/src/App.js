@@ -14,11 +14,11 @@ function App() {
   const [screen, setScreen] = useState(true);
 
   return (
-    screen ? <div className="bg-[black] h-[100vh]">
-      <button onClick={() => { setScreen(false) }} className="mt-[30px] text-white h-[40px] w-[150px] bg-gradient-to-r from-indigo-700 to-transparent ">Enter</button>
-      <Cube />
+    // screen ? <div className="bg-[black] h-[100vh]">
+    //   <button onClick={() => { setScreen(false) }} className="mt-[30px] text-white h-[40px] w-[150px] bg-gradient-to-r from-indigo-700 to-transparent ">Enter</button>
+    //   <Cube />
 
-    </div> :
+    // </div> :
       <div>
         <themeContext.Provider value={{ dark, setDark }} >
 
